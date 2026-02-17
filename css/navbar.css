@@ -5,3 +5,129 @@
 .navbar {
   padding: 80px 0;
 }
+
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 10000;
+  background: white;
+}
+
+.container-nav {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.registro-nav{
+  background-color: #4CAF4F;
+  color: white;
+  height: 45px;
+  width: 150px; 
+  border-radius: 5px;
+}
+
+#logo-nav img{
+  width: 180px;
+  font-family: Arial, Helvetica, sans-serif;
+  /* border: 1px solid red; */
+}
+#link-nav{
+  display: flex;
+  margin-left: auto;
+
+
+}
+
+#link-nav ul{
+  display: flex;
+  gap: 50px;
+  align-items: center; 
+    /* border: 1px solid red; */  
+}
+
+.registro-nav i{
+  margin-left: 8px;
+}
+
+#ul-nav li{
+    list-style: none;
+    padding: 0;
+   
+
+}
+#ul-nav a{
+    color: inherit;
+    text-decoration: none;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#ul-nav a:hover{
+  color: #4CAF4F;
+}
+
+#ul-nav button:hover{
+  color: #000000;
+}
+
+/* =========================
+   NAV MOBILE + TABLET
+========================= */
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.6em;
+  margin-left: auto;
+}
+
+@media (max-width: 1024px) {
+
+#menu-toggle {
+    display: block;
+    font-size: 2em;
+    color: black;
+  }
+
+
+#logo-nav:hover{
+    cursor: inherit;
+  }
+
+#link-nav{
+  margin-right:16px;
+}
+
+#link-nav ul {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: rgb(243, 239, 239);
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    display: none;
+    border-radius: 0 0 12px 12px;
+  }
+
+
+
+#link-nav ul.ativo {
+    display: flex;
+  }
+}
