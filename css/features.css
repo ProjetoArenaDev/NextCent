@@ -12,24 +12,17 @@
 	grid-template-columns: 1fr 1fr;
 	align-items: center;
 	gap: 4rem;
-	border: 1px solid green;
 }
 
 .features__image {
 	display: flex;
 	justify-content: flex-start;
-	border: 1px solid green;
 }
 
 .features__image img {
 	width: 100%;
 	max-width: 420px;
 	display: block;
-}
-
-.features__info {
-	/* max-width: 480px; */
-	border: 1px solid red;
 }
 
 .features__info h2 {
@@ -77,14 +70,11 @@
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 5rem 1.5rem;
+
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	align-items: center;
 	gap: 4rem;
-	border: 1px solid orange;
-}
-.features-dados .container .texto {
-	border: 1px solid green;
 }
 
 .features-dados .texto h2 {
@@ -96,7 +86,6 @@
 }
 
 .features-dados .texto h2 span {
-	/* display: block; */
 	color: #4caf4f;
 }
 
@@ -110,33 +99,61 @@
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 2.5rem 4rem;
+	align-items: start;
 }
 
-.features-dados .numeros div {
+.features-dados .numeros > div {
 	display: flex;
-	flex-direction: column;
-	border: 1px solid red;
+	align-items: center;
+	gap: 1rem;
 }
-.features-dados .numeros div:nth-child(even) {
+
+.features-dados .numeros i {
+	font-size: 1.6rem;
+	color: #4caf4f;
+	min-width: 24px;
+}
+
+.features-dados .numeros .info {
 	display: flex;
 	flex-direction: column;
-	align-items: flex-end;
-	border: 1px solid red;
+	justify-content: center;
 }
 
 .features-dados .numeros strong {
 	font-size: 1.8rem;
 	font-weight: 700;
 	color: #111827;
-	margin-bottom: 0.3rem;
+	line-height: 1.2;
 }
 
 .features-dados .numeros span {
 	font-size: 0.9rem;
 	color: #6b7280;
+	margin-top: 4px;
 }
 
-/* RESPONSIVO */
+@media (max-width: 1024px) {
+	.features-dados .container {
+		grid-template-columns: 1fr;
+		text-align: center;
+	}
+
+	.features-dados .numeros {
+		margin-top: 3rem;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2rem;
+	}
+
+	.features-dados .numeros > div {
+		justify-content: center;
+	}
+
+	.features-dados .numeros .info {
+		align-items: center;
+	}
+}
+
 @media (max-width: 768px) {
 	.features__block,
 	.features-dados .container {
@@ -152,13 +169,8 @@
 	.features-dados .texto {
 		margin: 0 auto;
 	}
-
-	.features-dados .numeros div:nth-child(even) {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
 }
+
 @media (max-width: 464px) {
 	.features-dados .numeros {
 		grid-template-columns: 1fr;
