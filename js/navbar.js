@@ -23,8 +23,11 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 const header = document.getElementById("navbar");
 const menuToggle = document.getElementById("menu-toggle");
 const menu = document.querySelector("#link-nav ul");
+const resgistro = document.querySelector(".registro-nav");
 
 let lastScroll = 0;
+
+menu.appendChild(resgistro);
 
 /* =========================
    SCROLL – HEADER
@@ -42,6 +45,7 @@ window.addEventListener("scroll", () => {
   }
 
   lastScroll = currentScroll;
+  lastScroll = currentScroll <= 0 ? 0 : currentScroll;
 });
 
 /* =========================

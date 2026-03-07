@@ -13,13 +13,13 @@
   height: 80px;
   z-index: 10000;
   background: white;
+  /* border: 1px solid red; */
 }
 
 .container-nav {
   max-width: 1320px;
-  margin: 0 auto;
   display: flex;
-  align-items: center;
+  margin: auto;
 }
 
 
@@ -40,36 +40,45 @@
   height: 45px;
   width: 150px; 
   border-radius: 5px;
+  margin-left: auto;
+}
+
+#logo-nav{
+  width: 10%;
 }
 
 #logo-nav img{
   width: 180px;
   font-family: Arial, Helvetica, sans-serif;
-  /* border: 1px solid red; */
+  /* border: 1px solid red;   */
 }
+
 #link-nav{
   display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  /* border: 1px solid red; */
   margin-left: auto;
 
-
+  
 }
 
 #link-nav ul{
   display: flex;
   gap: 50px;
-  align-items: center; 
-    /* border: 1px solid red; */  
+  margin-left: auto;
+  align-items: center;
+  /* border: 1px solid red;    */
 }
 
 .registro-nav i{
   margin-left: 8px;
+  
 }
 
-#ul-nav li{
+#ul-nav li, button{
     list-style: none;
-    padding: 0;
-   
-
+    padding: 0; 
 }
 #ul-nav a{
     color: inherit;
@@ -81,8 +90,13 @@
   color: #4CAF4F;
 }
 
-#ul-nav button:hover{
+#navbar button:hover{
   color: #000000;
+}
+
+#navbar.hide{
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
 }
 
 /* =========================
@@ -94,9 +108,15 @@
   border: none;
   font-size: 1.6em;
   margin-left: auto;
+  padding-right: 10px;
+}
+@media (max-width: 1160px) {
+  #link-nav ul{
+    gap: 30px;
+  }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1070px) {
 
 #menu-toggle {
     display: block;
@@ -130,4 +150,5 @@
 #link-nav ul.ativo {
     display: flex;
   }
+
 }
