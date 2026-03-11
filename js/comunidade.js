@@ -3,4 +3,5 @@ export function initComunidade() {
   if (!section) return;
 
   // Código da seção aqui
+
 }

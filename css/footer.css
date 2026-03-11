@@ -3,5 +3,151 @@
    ========================== */
 
 .footer {
-  padding: 80px 0;
+  background-color: var(--grayish-blue);
+  color: var(--white);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2.2fr 1fr 1fr 1.4fr;
+  gap: 4rem;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.footer-copyright {
+  color: var(--silver);
+  margin: 0.8rem 0;
+  font-size: 0.8rem;
+}
+
+.footer-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--white);
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-list li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-list a {
+  color: var(--silver);
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.3s ease, transform 0.2s ease;
+  will-change: transform;
+}
+
+.footer-list a:hover {
+  color: var(--ice-blue);
+  transform: scale(1.06);
+}
+
+.footer_social-list {
+  display: flex;
+  gap: 0.8rem;
+  list-style: none;
+  padding: 0;
+  margin-top: 1.8rem;
+}
+
+.social-link {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #37474F;
+  color: var(--blue-grayer);
+  border-radius: 50%;
+  font-size: 0.9rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Efeito hover para cada rede social */
+.social-link.instagram:hover { background: #E1306C; }
+.social-link.facebook:hover  { background: #1877F2; }
+.social-link.linkedin:hover  { background: #0A66C2; }
+.social-link.youtube:hover   { background: #FF0000; }
+
+.newsletter_form-input {
+  position: relative;
+  margin-top: 1rem;
+}
+
+.newsletter_form-input input {
+  width: 100%;
+  padding: 0.8rem 3.2rem 0.8rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #37474F;
+  color: var(--white);
+}
+
+.newsletter_form-input input::placeholder {
+  color: #B0BEC5;
+}
+
+.newsletter_form-input button {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  color: #B0BEC5;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+/* Responsividade */
+
+@media (max-width: 600px) {
+
+  .footer-container {
+    padding: 3rem 1.2rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  .footer-logo {
+    justify-content: center;
+  }
+
+  .footer_social-list {
+    justify-content: center;
+  }
+
+  .newsletter_form-input input {
+    font-size: 0.9rem;
+  }
+
 }
