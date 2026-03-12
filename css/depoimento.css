@@ -65,3 +65,71 @@
   font-weight:600;
   text-decoration:none;
 }
+
+/* RESPONSIVIDADE */
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+
+  .depoimento-container{
+    gap:32px;
+  }
+
+  .depoimento-imagem img{
+    width:250px;
+  }
+
+  .empresas-logo{
+    gap:20px;
+  }
+
+}
+
+/* Mobile 768px */
+
+@media (max-width: 768px){
+
+  .depoimento-container{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+  }
+
+  .depoimento-imagem img{
+    width:220px;
+  }
+
+  .empresas-linha{
+    flex-direction:column;
+    gap:20px;
+  }
+
+  .empresas-logo{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .empresas-btn{
+    margin-left:0;
+  }
+
+}
+
+/* Mobile 480px */
+
+@media (max-width:480px){
+
+  .depoimento{
+    padding:60px 20px;
+  }
+
+  .depoimento-text{
+    font-size:14px;
+  }
+
+  .empresas-logo img{
+    height:24px;
+  }
+
+}
