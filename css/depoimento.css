@@ -3,5 +3,65 @@
    ========================== */
 
 .depoimento {
-  padding: 80px 0;
+  padding: 80px 10%;
+  background: #f5f7fa;
+}
+
+.depoimento-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+}
+
+.depoimento-imagem img {
+  width: 320px;
+  border-radius: 8px;
+}
+
+.empresas-info {
+  flex: 1;
+}
+
+.depoimento-text {
+  line-height: 1.7;
+  color: #4d4d4d;
+  margin-bottom: 20px;
+}
+
+.empresas-info h3 {
+  color: #4CAF4F;
+  margin-bottom: 5px;
+}
+
+.empresa {
+  color: #717171;
+  margin-bottom: 25px;
+}
+
+.empresas-linha{
+  display:flex;
+  align-items:center;
+  margin-top:25px;
+}
+
+.empresas-logo{
+  display:flex;
+  gap:30px;
+}
+
+.empresas-logo img{
+  height:28px;
+}
+
+.empresas-btn{
+  margin-left:auto;
+}
+
+.btn{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  color:#4CAF4F;
+  font-weight:600;
+  text-decoration:none;
 }
