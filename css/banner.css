@@ -2,6 +2,7 @@
     max-width: 1320px;
     margin: auto;
     background-color: #F5F7FA;
+    padding: 0;
 }
 
 .carrossel{
@@ -11,11 +12,8 @@
 .div-banner{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    margin: 100px 0px;
-    border: 1px solid red;
     height: 400px;
     width: 100%;
-    
 }
 
 .banner-img{
@@ -35,18 +33,16 @@
 .banner-img img{
   max-width: 100%;
   max-height: 330px;
-  border: 1px solid red;
 }
 
 .banner-txt h2{
-    font-size: 3em;
+    font-size: 2.9em;
     margin: 0;
 }
 
 .banner-txt{
     justify-self: center;
     align-self: center;
-    border: 1px solid red;
 }
 
 .banner p, h2{
@@ -57,4 +53,116 @@
     margin: 0;
     padding-top: 4px;
     padding-bottom: 25px;
+}
+.registro-banner{
+  background-color: #4CAF4F;
+  color: white;
+  height: 45px;
+  width: 140px; 
+  border-radius: 5px;
+  margin-left: auto;
+}
+
+.registro-banner a{
+    text-decoration: none;
+    color: white;
+}
+
+.carrossel {
+  position: relative;
+  overflow: hidden;
+}
+
+.div-banner {
+  display: none;
+  animation: fade 0.6s;
+}
+
+.div-banner.ativo {
+  display: grid;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.bolinhas{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.dot{
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.ativo{
+  background: #4CAF4F;
+}
+
+.div-banner{
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.div-banner.ativo{
+  display: grid;
+  opacity: 1;
+}
+.carrossel{
+  user-select: none;
+  cursor: grab;
+}
+
+@media (max-width: 720px) {
+
+.div-banner{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    height: 700px; 
+}
+
+.banner-txt{
+    margin-bottom: 30px;
+}
+
+.banner-txt h2{
+    font-size: 2.6em;
+    margin: 0;
+}
+
+.carrossel{
+  position: relative;
+  overflow: hidden;
+}
+
+.div-banner{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s;
+}
+
+.div-banner.ativo{
+  opacity: 1;
+  pointer-events: auto;
+  position: relative;
+}
+
 }
