@@ -3,4 +3,5 @@ export function initBanner() {
   if (!section) return;
 
   // Código da seção aqui
+  
 }
